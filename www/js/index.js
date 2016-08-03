@@ -17,8 +17,6 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-        document.removeEventListener('deviceready', app.onDeviceReady, false);
-        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
