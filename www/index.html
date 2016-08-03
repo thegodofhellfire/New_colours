@@ -151,7 +151,7 @@
 
         </div>
         
-        <div id="c3_blue" class="page right" style="background-color: #CCFFCC">
+        <!--<div id="c3_blue" class="page right" style="background-color: #CCFFCC">
             <style type="text/css">
                 img {
                     /*Page 2*/
@@ -522,7 +522,7 @@
                 <h1 id="purple_text"> Purple </h1>
                 <a id="linktop" href="javascript:playexplosion()"></a>
                 
-                </div>
+                </div>-->
         <audio id="explosion" src="data/explosion.mp3" volume="0.5">
         </audio>
 
@@ -532,24 +532,24 @@
             
             var homePage = document.getElementById("homePage");
             var page2 = document.getElementById("c2_green");
-            var page3 = document.getElementById("c3_blue");
+            /*var page3 = document.getElementById("c3_blue");
             var page4 = document.getElementById("c4_yellow");
             var page5 = document.getElementById("c5_black");
             var page6 = document.getElementById("c6_orange");
             var page7 = document.getElementById("c7_white");
-            var page8 = document.getElementById("c8_purple");
+            var page8 = document.getElementById("c8_purple");*/
  
             currentPage = homePage;
             var flag=0;
             
             var hammertime1 = new Hammer(homePage);
             var hammertime2 = new Hammer(page2);
-            var hammertime3 = new Hammer(page3);
+           /* var hammertime3 = new Hammer(page3);
             var hammertime4 = new Hammer(page4);
             var hammertime5 = new Hammer(page5);
             var hammertime6 = new Hammer(page6);
             var hammertime7 = new Hammer(page7);
-            var hammertime8 = new Hammer(page8);
+            var hammertime8 = new Hammer(page8);*/
             
             hammertime1.on("swipeleft", function(ev) {
                             slidePageFrom(page2, 'right');
@@ -559,10 +559,10 @@
                             slidePageFrom2(page3, 'left');
                             console.log(ev);
                            });*/
-            hammertime2.on("swipeleft", function(ev) {
+            /*hammertime2.on("swipeleft", function(ev) {
                             slidePageFrom(page3, 'right');
                             console.log(ev);
-                           });
+                           });*/
             hammertime2.on("swiperight", function(ev) {
                             slidePageFrom(homePage, 'left');
                             console.log(ev);
@@ -570,7 +570,7 @@
             /*hammertime3.on("swipeleft", function(ev) {
                            slidePageFrom2(homePage, 'right');
                             console.log(ev);
-                           });*/
+                           });
             hammertime3.on("swipeleft", function(ev) {
                            slidePageFrom(page4, 'right');
                            console.log(ev);
@@ -611,14 +611,14 @@
                             slidePageFrom(page6, 'left');
                             console.log(ev);
                            });
-            /*hammertime8.on("swipeleft", function(ev) {
+            hammertime8.on("swipeleft", function(ev) {
                             slidePageFrom(page5, 'right');
                             console.log(ev);
-                           });*/
+                           });
             hammertime8.on("swiperight", function(ev) {
                             slidePageFrom(page7, 'left');
                             console.log(ev);
-                           });
+                           });*/
            
             
             function slidePageFrom(page, from) {
@@ -633,7 +633,7 @@
                 document.getElementById("red_text").style.fontWeight = "normal";
                 document.getElementById("green_text").style.color = "black";
                 document.getElementById("green_text").style.fontWeight = "normal";
-                document.getElementById("blue_text").style.color = "black";
+                /*document.getElementById("blue_text").style.color = "black";
                 document.getElementById("blue_text").style.fontWeight = "normal";
                 document.getElementById("yellow_text").style.color = "black";
                 document.getElementById("yellow_text").style.fontWeight = "normal";
@@ -644,10 +644,10 @@
                 document.getElementById("orange_text").style.color = "black";
                 document.getElementById("orange_text").style.fontWeight = "normal";
                 document.getElementById("purple_text").style.color = "black";
-                document.getElementById("purple_text").style.fontWeight = "normal";
+                document.getElementById("purple_text").style.fontWeight = "normal";*/
             }
     
-    function slidePageFrom2(page, from) {
+    /*function slidePageFrom2(page, from) {
         // Position the page at the starting position of the animation
         page.className = "page " + from + '2';
         // Position the new page and the current page at the ending position of their animation with a transition class indicating the duration of the animation
@@ -661,7 +661,7 @@
         document.getElementById("green_text").style.fontWeight = "normal";
         document.getElementById("blue_text").style.color = "black";
         document.getElementById("blue_text").style.fontWeight = "normal";
-    }
+    }*/
 
     function playexplosion() {
         if (flag==0) {
@@ -669,7 +669,7 @@
             document.getElementById("red_text").style.fontWeight = "bold";
             document.getElementById("green_text").style.color = "green";
             document.getElementById("green_text").style.fontWeight = "bold";
-            document.getElementById("blue_text").style.color = "blue";
+            /*document.getElementById("blue_text").style.color = "blue";
             document.getElementById("blue_text").style.fontWeight = "bold";
             document.getElementById("yellow_text").style.color = "yellow";
             document.getElementById("yellow_text").style.fontWeight = "bold";
@@ -680,7 +680,7 @@
             document.getElementById("white_text").style.color = "white";
             document.getElementById("white_text").style.fontWeight = "bold";
             document.getElementById("purple_text").style.color = "purple";
-            document.getElementById("purple_text").style.fontWeight = "bold";
+            document.getElementById("purple_text").style.fontWeight = "bold";*/
             var audio = document.getElementById("explosion");
             audio.volume=0.5;
             audio.play();
