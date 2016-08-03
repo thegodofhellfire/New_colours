@@ -17,23 +17,9 @@
  * under the License.
  */
 var app = {
-    autoShowInterstitial: false,
-    progressDialog: document.getElementById("progressDialog"),
-    spinner: document.getElementById("spinner"),
-    weinre: {
-        enabled: false,
-        ip: '', // ex. http://192.168.1.13
-        port: '', // ex. 9090
-        targetApp: '' // ex. see weinre docs
-    },
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        if ((/(ipad|iphone|ipod|android)/i.test(navigator.userAgent))) {
-            document.addEventListener('deviceready', this.onDeviceReady, false);
-        } else {
-            app.onDeviceReady();
-        }
     },
     // Bind Event Listeners
     //
@@ -75,17 +61,6 @@ var app = {
     },
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        if (window.admob) {
-            document.addEventListener("orientationchange", this.onOrientationChange, false);
-            document.addEventListener(admob.events.onAdLoaded, this.onAdLoaded, false);
-            document.addEventListener(admob.events.onAdFailedToLoad, this.onAdFailedToLoad, false);
-            document.addEventListener(admob.events.onAdOpened, function (e) { }, false);
-            document.addEventListener(admob.events.onAdClosed, function (e) { }, false);
-            document.addEventListener(admob.events.onAdLeftApplication, function (e) { }, false);
-            document.addEventListener(admob.events.onInAppPurchaseRequested, function (e) { }, false);
-        } else {
-            alert('cordova-admob plugin not ready.\nAre you in a desktop browser2? It won\'t work...');
-        }
     },
     // deviceready Event Handler
     //
@@ -101,24 +76,6 @@ var app = {
         
         document.removeEventListener('deviceready', app.onDeviceReady, false);
         
-        if (app.weinre.enabled) {
-            console.log('Loading weinre...');
-            weinre = document.createElement('script');
-            weinreUrl = app.weinre.ip + ":" + app.weinre.port;
-            weinreUrl += '/target/target-script-min.js';
-            weinreUrl += '#' + app.weinre.targetApp;
-            weinre.setAttribute('src', weinreUrl);
-            document.head.appendChild(weinre);
-        }
-        
-        if (window.admob) {
-            console.log('Binding ad events...');
-            app.bindAdEvents();
-            console.log('Initializing ads...');
-            app.initAds();
-        } else {
-            alert('cordova-admob plugin not ready.\nAre you in a desktop browser3? It won\'t work...');
-        }
     },
     // Update DOM on a Received Event
     onAdLoaded: function (e) {
