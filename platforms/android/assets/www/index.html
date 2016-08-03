@@ -1,0 +1,706 @@
+<html id="viewport">
+    <head>
+        <title>Colours</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+            <style type="text/css">
+                body {
+                    overflow: hidden;
+                }
+            
+                .page {
+                    position: absolute;
+                    padding: 12px;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            
+            .page.left {
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+            
+            .page.left2 {
+                -webkit-transform: translate3d(-200%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            .page.center {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+            
+            .page.right {
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+            
+            .page.right2 {
+                -webkit-transform: translate3d(200%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+            }
+            .page.transition {
+                -webkit-transition-duration: .25s;
+                transition-duration: .25s;
+            }
+            
+                </style>
+            </head>
+    <body>
+        <div id="homePage" class="page center" style="background-color: #CCFFCC">
+            <div id="progressDialog" class="progressDialog hidden">
+                <div id="spinner"></div>
+            <style type="text/css">
+                img {
+                    /*Page 1*/
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 400px;
+                    height: 400px;
+                    margin-top: -200px; /* Half the height */
+                    margin-left: -200px; /* Half the width */
+                }
+            </style>
+            <img src="data/Red.png" alt="Red">
+                
+                <style type="text/css">
+                    h1 {
+                        font-size:80px;
+                        font-weight:normal;
+                        margin:0px;
+                        overflow:visible;
+                        padding:0px;
+                        text-align:center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        height: 400px;
+                        margin-top: -300px; /* Half the height */
+                        margin-left: -200px; /* Half the width */
+                    }
+                
+                    #linktop {
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 15%;
+                        margin-left: 0%; /* Half the width */
+                        margin-top: 0%;
+                    }
+                    </style>
+                
+                <h1 id="red_text"> Red </h1>
+                
+                <a id="linktop" href="javascript:playexplosion()"></a>
+        </div>
+        
+        <div id="c2_green" class="page right" style="background-color: #CCFFCC">
+            <style type="text/css">
+                img {
+                    /*Page 1*/
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 400px;
+                    height: 400px;
+                    margin-top: -200px; /* Half the height */
+                    margin-left: -200px; /* Half the width */
+                }
+            </style>
+            <img src="data/Green.jpg" alt="Green">
+                
+                <style type="text/css">
+                    h1 {
+                        font-size:80px;
+                        font-weight:normal;
+                        margin:0px;
+                        overflow:visible;
+                        padding:0px;
+                        text-align:center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        height: 400px;
+                        margin-top: -300px; /* Half the height */
+                        margin-left: -200px; /* Half the width */
+                    }
+                 #linktop {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 15%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 0%;
+                }
+                    html, body {
+                        height: 100%; /* or the height property above will not work */
+                        margin: 0; /* to avoid scrollbars */
+                        padding: 0;
+                        overflow-x: hidden;
+                    }
+                body {
+                    position: relative
+                }
+                </style>
+                
+                <h1 id="green_text"> Green </h1>
+                
+                <a id="linktop" href="javascript:playexplosion()"></a>
+
+        </div>
+        
+        <div id="c3_blue" class="page right" style="background-color: #CCFFCC">
+            <style type="text/css">
+                img {
+                    /*Page 2*/
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 400px;
+                    height: 400px;
+                    margin-top: -200px; /* Half the height */
+                    margin-left: -200px; /* Half the width */
+                }
+            </style>
+            <img src="data/Blue.jpg" alt="Blue">
+                
+                <style type="text/css">
+                    h1 {
+                        font-size:80px;
+                        font-weight:normal;
+                        margin:0px;
+                        overflow:visible;
+                        padding:0px;
+                        text-align:center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        height: 400px;
+                        margin-top: -300px; /* Half the height */
+                        margin-left: -200px; /* Half the width */
+                    }
+                    #linkleft {
+                        display: block;
+                        position: absolute;
+                        width: 50%;
+                        height: 100%;
+                        margin-left: 0%; /* Half the width */
+                        margin-top: 10%;
+                    }
+                #linktop {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 15%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 0%;
+                }
+                    html, body {
+                        height: 100%; /* or the height property above will not work */
+                        margin: 0; /* to avoid scrollbars */
+                        padding: 0;
+                        overflow-x: hidden;
+                    }
+                body {
+                    position: relative
+                }
+                </style>
+                
+                <h1 id="blue_text"> Blue </h1>
+                <a id="linktop" href="javascript:playexplosion()"></a>
+                
+                </div>
+        <div id="c4_yellow" class="page right" style="background-color: #CCFFCC">
+            <style type="text/css">
+                img {
+                    /*Page 3*/
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 400px;
+                    height: 400px;
+                    margin-top: -200px; /* Half the height */
+                    margin-left: -200px; /* Half the width */
+                }
+            </style>
+            <img src="data/Yellow.png" alt="Yellow">
+                
+                <style type="text/css">
+                    h1 {
+                        font-size:80px;
+                        font-weight:normal;
+                        margin:0px;
+                        overflow:visible;
+                        padding:0px;
+                        text-align:center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        height: 400px;
+                        margin-top: -300px; /* Half the height */
+                        margin-left: -200px; /* Half the width */
+                    }
+                #linkleft {
+                    display: block;
+                    position: absolute;
+                    width: 50%;
+                    height: 100%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 10%;
+                }
+                #linktop {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 15%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 0%;
+                }
+                html, body {
+                    height: 100%; /* or the height property above will not work */
+                    margin: 0; /* to avoid scrollbars */
+                    padding: 0;
+                    overflow-x: hidden;
+                }
+                body {
+                    position: relative
+                }
+                </style>
+                
+                <h1 id="yellow_text"> Yellow </h1>
+                <a id="linktop" href="javascript:playexplosion()"></a>
+                
+                </div>
+        <div id="c5_black" class="page right" style="background-color: #CCFFCC">
+            <style type="text/css">
+                img {
+                    /*Page 4*/
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 400px;
+                    height: 400px;
+                    margin-top: -200px; /* Half the height */
+                    margin-left: -200px; /* Half the width */
+                }
+            </style>
+            <img src="data/Black.png" alt="Black">
+                
+                <style type="text/css">
+                    h1 {
+                        font-size:80px;
+                        font-weight:normal;
+                        margin:0px;
+                        overflow:visible;
+                        padding:0px;
+                        text-align:center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        height: 400px;
+                        margin-top: -300px; /* Half the height */
+                        margin-left: -200px; /* Half the width */
+                    }
+                #linkleft {
+                    display: block;
+                    position: absolute;
+                    width: 50%;
+                    height: 100%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 10%;
+                }
+                #linktop {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 15%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 0%;
+                }
+                html, body {
+                    height: 100%; /* or the height property above will not work */
+                    margin: 0; /* to avoid scrollbars */
+                    padding: 0;
+                    overflow-x: hidden;
+                }
+                body {
+                    position: relative
+                }
+                </style>
+                
+                <h1 id="black_text"> Black </h1>
+                <a id="linktop" href="javascript:playexplosion()"></a>
+                
+                </div>
+        <div id="c6_orange" class="page right" style="background-color: #CCFFCC">
+            <style type="text/css">
+                img {
+                    /*Page 5*/
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 400px;
+                    height: 400px;
+                    margin-top: -200px; /* Half the height */
+                    margin-left: -200px; /* Half the width */
+                }
+            </style>
+            <img src="data/Orange.png" alt="Orange">
+                
+                <style type="text/css">
+                    h1 {
+                        font-size:80px;
+                        font-weight:normal;
+                        margin:0px;
+                        overflow:visible;
+                        padding:0px;
+                        text-align:center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        height: 400px;
+                        margin-top: -300px; /* Half the height */
+                        margin-left: -200px; /* Half the width */
+                    }
+                #linkleft {
+                    display: block;
+                    position: absolute;
+                    width: 50%;
+                    height: 100%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 10%;
+                }
+                #linktop {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 15%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 0%;
+                }
+                html, body {
+                    height: 100%; /* or the height property above will not work */
+                    margin: 0; /* to avoid scrollbars */
+                    padding: 0;
+                    overflow-x: hidden;
+                }
+                body {
+                    position: relative
+                }
+                </style>
+                
+                <h1 id="orange_text"> Orange </h1>
+                <a id="linktop" href="javascript:playexplosion()"></a>
+                
+                </div>
+        <div id="c7_white" class="page right" style="background-color: #CCFFCC">
+            <style type="text/css">
+                img {
+                    /*Page 6*/
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 400px;
+                    height: 400px;
+                    margin-top: -200px; /* Half the height */
+                    margin-left: -200px; /* Half the width */
+                }
+            </style>
+            <img src="data/White.png" alt="White">
+                
+                <style type="text/css">
+                    h1 {
+                        font-size:80px;
+                        font-weight:normal;
+                        margin:0px;
+                        overflow:visible;
+                        padding:0px;
+                        text-align:center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        height: 400px;
+                        margin-top: -300px; /* Half the height */
+                        margin-left: -200px; /* Half the width */
+                    }
+                #linkleft {
+                    display: block;
+                    position: absolute;
+                    width: 50%;
+                    height: 100%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 10%;
+                }
+                #linktop {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 15%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 0%;
+                }
+                html, body {
+                    height: 100%; /* or the height property above will not work */
+                    margin: 0; /* to avoid scrollbars */
+                    padding: 0;
+                    overflow-x: hidden;
+                }
+                body {
+                    position: relative
+                }
+                </style>
+                
+                <h1 id="white_text"> White </h1>
+                <a id="linktop" href="javascript:playexplosion()"></a>
+                
+                </div>
+        <div id="c8_purple" class="page right" style="background-color: #CCFFCC">
+            <style type="text/css">
+                img {
+                    /*Page 7*/
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 400px;
+                    height: 400px;
+                    margin-top: -200px; /* Half the height */
+                    margin-left: -200px; /* Half the width */
+                }
+            </style>
+            <img src="data/Purple.png" alt="Purple">
+                
+                <style type="text/css">
+                    h1 {
+                        font-size:80px;
+                        font-weight:normal;
+                        margin:0px;
+                        overflow:visible;
+                        padding:0px;
+                        text-align:center;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 400px;
+                        height: 400px;
+                        margin-top: -300px; /* Half the height */
+                        margin-left: -200px; /* Half the width */
+                    }
+                #linkleft {
+                    display: block;
+                    position: absolute;
+                    width: 50%;
+                    height: 100%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 10%;
+                }
+                #linktop {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 15%;
+                    margin-left: 0%; /* Half the width */
+                    margin-top: 0%;
+                }
+                html, body {
+                    height: 100%; /* or the height property above will not work */
+                    margin: 0; /* to avoid scrollbars */
+                    padding: 0;
+                    overflow-x: hidden;
+                }
+                body {
+                    position: relative
+                }
+                </style>
+                
+                <h1 id="purple_text"> Purple </h1>
+                <a id="linktop" href="javascript:playexplosion()"></a>
+                
+                </div>
+        <audio id="explosion" src="data/explosion.mp3" volume="0.5">
+        </audio>
+
+
+    <script src="js/hammer.min.js"></script>
+    <script>
+            
+            var homePage = document.getElementById("homePage");
+            var page2 = document.getElementById("c2_green");
+            var page3 = document.getElementById("c3_blue");
+            var page4 = document.getElementById("c4_yellow");
+            var page5 = document.getElementById("c5_black");
+            var page6 = document.getElementById("c6_orange");
+            var page7 = document.getElementById("c7_white");
+            var page8 = document.getElementById("c8_purple");
+ 
+            currentPage = homePage;
+            var flag=0;
+            
+            var hammertime1 = new Hammer(homePage);
+            var hammertime2 = new Hammer(page2);
+            var hammertime3 = new Hammer(page3);
+            var hammertime4 = new Hammer(page4);
+            var hammertime5 = new Hammer(page5);
+            var hammertime6 = new Hammer(page6);
+            var hammertime7 = new Hammer(page7);
+            var hammertime8 = new Hammer(page8);
+            
+            hammertime1.on("swipeleft", function(ev) {
+                            slidePageFrom(page2, 'right');
+                            console.log(ev);
+                           });
+            /*hammertime1.on("swiperight", function(ev) {
+                            slidePageFrom2(page3, 'left');
+                            console.log(ev);
+                           });*/
+            hammertime2.on("swipeleft", function(ev) {
+                            slidePageFrom(page3, 'right');
+                            console.log(ev);
+                           });
+            hammertime2.on("swiperight", function(ev) {
+                            slidePageFrom(homePage, 'left');
+                            console.log(ev);
+                           });
+            /*hammertime3.on("swipeleft", function(ev) {
+                           slidePageFrom2(homePage, 'right');
+                            console.log(ev);
+                           });*/
+            hammertime3.on("swipeleft", function(ev) {
+                           slidePageFrom(page4, 'right');
+                           console.log(ev);
+                           });
+            hammertime3.on("swiperight", function(ev) {
+                            slidePageFrom(page2, 'left');
+                            console.log(ev);
+                           });
+            hammertime4.on("swipeleft", function(ev) {
+                            slidePageFrom(page5, 'right');
+                            console.log(ev);
+                           });
+            hammertime4.on("swiperight", function(ev) {
+                            slidePageFrom(page3, 'left');
+                            console.log(ev);
+                           });
+            hammertime5.on("swipeleft", function(ev) {
+                            slidePageFrom(page6, 'right');
+                            console.log(ev);
+                           });
+            hammertime5.on("swiperight", function(ev) {
+                            slidePageFrom(page4, 'left');
+                            console.log(ev);
+                           });
+            hammertime6.on("swipeleft", function(ev) {
+                            slidePageFrom(page7, 'right');
+                            console.log(ev);
+                           });
+            hammertime6.on("swiperight", function(ev) {
+                            slidePageFrom(page5, 'left');
+                            console.log(ev);
+                           });
+            hammertime7.on("swipeleft", function(ev) {
+                            slidePageFrom(page8, 'right');
+                            console.log(ev);
+                           });
+            hammertime7.on("swiperight", function(ev) {
+                            slidePageFrom(page6, 'left');
+                            console.log(ev);
+                           });
+            /*hammertime8.on("swipeleft", function(ev) {
+                            slidePageFrom(page5, 'right');
+                            console.log(ev);
+                           });*/
+            hammertime8.on("swiperight", function(ev) {
+                            slidePageFrom(page7, 'left');
+                            console.log(ev);
+                           });
+           
+            
+            function slidePageFrom(page, from) {
+                // Position the page at the starting position of the animation
+                page.className = "page " + from;
+                // Position the new page and the current page at the ending position of their animation with a transition class indicating the duration of the animation
+                page.className ="page transition center";
+                currentPage.className = "page transition " + (from === "left" ? "right" : "left");
+                currentPage = page;
+                flag=0;
+                document.getElementById("red_text").style.color = "black";
+                document.getElementById("red_text").style.fontWeight = "normal";
+                document.getElementById("green_text").style.color = "black";
+                document.getElementById("green_text").style.fontWeight = "normal";
+                document.getElementById("blue_text").style.color = "black";
+                document.getElementById("blue_text").style.fontWeight = "normal";
+                document.getElementById("yellow_text").style.color = "black";
+                document.getElementById("yellow_text").style.fontWeight = "normal";
+                document.getElementById("black_text").style.color = "black";
+                document.getElementById("black_text").style.fontWeight = "normal";
+                document.getElementById("white_text").style.color = "black";
+                document.getElementById("white_text").style.fontWeight = "normal";
+                document.getElementById("orange_text").style.color = "black";
+                document.getElementById("orange_text").style.fontWeight = "normal";
+                document.getElementById("purple_text").style.color = "black";
+                document.getElementById("purple_text").style.fontWeight = "normal";
+            }
+    
+    function slidePageFrom2(page, from) {
+        // Position the page at the starting position of the animation
+        page.className = "page " + from + '2';
+        // Position the new page and the current page at the ending position of their animation with a transition class indicating the duration of the animation
+        page.className ="page transition center";
+        currentPage.className = "page transition " + (from === "left" ? "right" : "left");
+        currentPage = page;
+        flag=0;
+        document.getElementById("red_text").style.color = "black";
+        document.getElementById("red_text").style.fontWeight = "normal";
+        document.getElementById("green_text").style.color = "black";
+        document.getElementById("green_text").style.fontWeight = "normal";
+        document.getElementById("blue_text").style.color = "black";
+        document.getElementById("blue_text").style.fontWeight = "normal";
+    }
+
+    function playexplosion() {
+        if (flag==0) {
+            document.getElementById("red_text").style.color = "red";
+            document.getElementById("red_text").style.fontWeight = "bold";
+            document.getElementById("green_text").style.color = "green";
+            document.getElementById("green_text").style.fontWeight = "bold";
+            document.getElementById("blue_text").style.color = "blue";
+            document.getElementById("blue_text").style.fontWeight = "bold";
+            document.getElementById("yellow_text").style.color = "yellow";
+            document.getElementById("yellow_text").style.fontWeight = "bold";
+            document.getElementById("orange_text").style.color = "orange";
+            document.getElementById("orange_text").style.fontWeight = "bold";
+            document.getElementById("black_text").style.color = "black";
+            document.getElementById("black_text").style.fontWeight = "bold";
+            document.getElementById("white_text").style.color = "white";
+            document.getElementById("white_text").style.fontWeight = "bold";
+            document.getElementById("purple_text").style.color = "purple";
+            document.getElementById("purple_text").style.fontWeight = "bold";
+            var audio = document.getElementById("explosion");
+            audio.volume=0.5;
+            audio.play();
+            flag=1;
+        }
+    }
+    
+    
+    
+        </script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+        setTimeout(function() {
+                   app.startBannerAds();
+                   }, 1000);
+        </script>
+
+    </body>
+</html>
+
